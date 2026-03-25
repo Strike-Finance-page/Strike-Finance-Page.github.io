@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /strike-finance/
+Sitemap: https://strike-finance.github.io/sitemap.xml
