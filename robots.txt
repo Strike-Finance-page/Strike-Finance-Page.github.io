@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://strike-finance-page.github.io/sitemap.xml
